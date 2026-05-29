@@ -1,7 +1,7 @@
-# MRLR Speaker Recruitment Website
+# MORE Speaker Recruitment Website
 
 Static landing page for preliminary invited-speaker conversations for the
-proposed MRLR 2027 workshop.
+proposed MORE 2027 workshop.
 
 ## Preview Locally
 
@@ -21,9 +21,6 @@ Then open `http://localhost:4173/`.
 - Before making the site public, confirm the target venue, update organizer
   information, remove the `noindex` tag when appropriate, and add only
   speakers who have consented to being listed.
-- Organizer cards currently contain portrait placeholders. Replace each
-  `.portrait-placeholder` block in `index.html` with an `<img>` element once
-  approved portrait images are available.
 - The invited-speakers table contains public-facing participation status.
   Add or revise entries only when the relevant invitation status can be shown.
 - The site is plain HTML and CSS and can be deployed directly through GitHub

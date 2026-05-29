@@ -158,10 +158,11 @@ h3 {
 }
 
 .hero h1 {
+  max-width: 1120px;
   color: var(--navy);
-  font-size: clamp(2.3rem, 3.15vw, 2.85rem);
-  line-height: 1.08;
-  white-space: nowrap;
+  font-size: clamp(2.15rem, 2.75vw, 2.62rem);
+  line-height: 1.12;
+  white-space: normal;
 }
 
 .hero-grid {
@@ -446,46 +447,12 @@ h3 {
   border-left: 1px solid var(--line);
 }
 
-.fact-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 70px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.fact-strip div {
-  min-height: 108px;
-  padding: 26px 25px 22px;
-}
-
-.fact-strip div + div {
-  border-left: 1px solid var(--line);
-}
-
-.fact-label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--muted);
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.fact-strip strong {
-  color: var(--navy);
-  font-size: 1.03rem;
-  font-weight: 600;
-}
-
 .section {
   padding: 90px 0;
 }
 
 .section-heading h2,
 .speakers h2,
-.organizers h2,
 .contact-row h2 {
   font-size: clamp(2rem, 3vw, 2.75rem);
   line-height: 1.17;
@@ -591,77 +558,13 @@ h3 {
   text-transform: uppercase;
 }
 
-.organizers {
+.contact-section {
   color: var(--white);
   background: var(--navy);
 }
 
-.organizer-grid {
-  display: grid;
-  grid-template-columns: 0.83fr 1.17fr;
-  gap: 70px;
-}
-
-.organizers .section-kicker,
-.contact-row .section-kicker {
+.contact-section .section-kicker {
   color: #8fd1ce;
-}
-
-.organizer-note {
-  max-width: 390px;
-  margin-top: 25px;
-  color: #bfcdda;
-}
-
-.organizer-intro h2 {
-  font-size: clamp(1.76rem, 2.25vw, 2.16rem);
-}
-
-.organizer-intro h2 span {
-  display: block;
-  white-space: nowrap;
-}
-
-.people {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.people article {
-  padding: 14px 14px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.portrait-placeholder {
-  display: flex;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  color: #91b8c8;
-  background:
-    radial-gradient(circle at 50% 38%, rgba(143, 209, 206, 0.16), transparent 30%),
-    rgba(255, 255, 255, 0.045);
-}
-
-.portrait-placeholder span {
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-}
-
-.people h3 {
-  margin-bottom: 13px;
-  color: var(--white);
-  font-size: 1.43rem;
-}
-
-.people p {
-  color: #c6d4df;
-  font-size: 0.9rem;
 }
 
 .contact-row {
@@ -669,9 +572,6 @@ h3 {
   grid-template-columns: 1fr auto;
   gap: 70px;
   align-items: center;
-  margin-top: 68px;
-  padding-top: 52px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .contact-row p:not(.section-kicker) {
@@ -681,6 +581,7 @@ h3 {
 }
 
 .contact-row h2 {
+  color: var(--white);
   font-size: clamp(1.58rem, 2.05vw, 2.02rem);
 }
 
@@ -717,7 +618,6 @@ h3 {
 @media (max-width: 980px) {
   .hero-grid,
   .speakers-heading,
-  .organizer-grid,
   .contact-row {
     grid-template-columns: 1fr;
   }
@@ -728,7 +628,6 @@ h3 {
 
   .hero h1 {
     max-width: 720px;
-    white-space: normal;
   }
 
   .hero-copy {
@@ -739,26 +638,11 @@ h3 {
     max-width: 570px;
   }
 
-  .theme-grid,
-  .people {
+  .theme-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .fact-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .fact-strip div:nth-child(3) {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .fact-strip div:nth-child(4) {
-    border-top: 1px solid var(--line);
-  }
-
-  .speakers-heading,
-  .organizer-grid {
+  .speakers-heading {
     gap: 45px;
   }
 
@@ -812,7 +696,7 @@ h3 {
   }
 
   .hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3rem);
+    font-size: clamp(2.05rem, 9vw, 2.7rem);
   }
 
   .venue-card strong {
@@ -834,25 +718,8 @@ h3 {
     gap: 12px;
   }
 
-  .fact-strip,
-  .theme-grid,
-  .people {
+  .theme-grid {
     grid-template-columns: 1fr;
-  }
-
-  .fact-strip {
-    margin-top: 47px;
-  }
-
-  .fact-strip div {
-    min-height: 0;
-    padding: 20px 4px;
-  }
-
-  .fact-strip div + div,
-  .fact-strip div:nth-child(3) {
-    border-top: 1px solid var(--line);
-    border-left: 0;
   }
 
   .section {
@@ -865,15 +732,6 @@ h3 {
 
   .theme-card {
     min-height: 0;
-  }
-
-  .people article {
-    min-height: 0;
-  }
-
-  .contact-row {
-    margin-top: 48px;
-    padding-top: 39px;
   }
 
   .footer-row {
